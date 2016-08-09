@@ -15,7 +15,7 @@ Within the _FOR_ loop, use `console.log` to:
 
 	for(var i=0; i<presidents.length; i++){
 		console.log(presidents[i]);
-		console.log ("The value of i is: " + i);
+		console.log ("The value of i is: " + [i]);
 	}
 
 
@@ -24,14 +24,28 @@ Within the _FOR_ loop, use `console.log` to:
 
 
 /***bonus:** could you take the code inside of this FOR loop and encapsulate it inside of a function called `printContent` and still achieve the same result? This new function should accept two parameters.*/
+var celbs = ['beyonce', 'mariah carey', 'kelly rowland', 'whitney houston'];
+function printContent (prezz){
+	for(var i=0; i<prezz.length; i++){
+		console.log(prezz[i]);
+		/***console.log ("The value of i is: " + [i]);***/
+	}
+}
 
-
-
+printContent(presidents);
+printContent(celbs);
 
 /*Declare a variable named `stringOfNumbers` and set it's value to `''` (an empty String).*/
 
+var stringOfNumbers = '';
+
+
 /*Then write a _FOR_ loop that appends a Number value to that string starting from `10` all the way up to and including `20`.*/
 
+for(var i = 10; i<=21; i++){
+	console.log(stringOfNumbers+=[i]);
+
+}
 
 
 /***bonus:** could you take the code inside of this _FOR_ loop and encapsulate it inside of a function called `appendToString` and still achieve the same result?*/
