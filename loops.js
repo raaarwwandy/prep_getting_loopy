@@ -43,12 +43,14 @@ var stringOfNumbers = '';
 /*Then write a _FOR_ loop that appends a Number value to that string starting from `10` all the way up to and including `20`.*/
 
 for(var i = 10; i<=21; i++){
-	console.log(stringOfNumbers+=[i]);
+	stringOfNumbers+=[i];
 
 }
 
+console.log(stringOfNumbers);
 
 /***bonus:** could you take the code inside of this _FOR_ loop and encapsulate it inside of a function called `appendToString` and still achieve the same result?*/
+
 
 
 
@@ -58,6 +60,14 @@ Declare a variable named `evenNumberArray`.
 Use a _FOR_ loop to add only even numbers to an Array. Add `50` even numbers to the `evenNumberArray` starting with the value `0`.*/
 
   
+var evenNumberArray = [];
+
+for(i = 0; i <= 99; i++){
+	if (i%2===0){
+	evenNumberArray.push(i);
+}
+}
+	console.log(evenNumberArray);
 
 /*## `Accessing only the odd indexes of an Array - 'Not Even Brah'`
 Someone forgot to fill out this array! Oh noes...
