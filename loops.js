@@ -82,10 +82,10 @@ Example result should look like:
 `[ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]`*/
 
 
-var oopsArray = ['turn', '', 'down', '' , 'for', '', 'what'];
+var oopsArray = ['turn', , 'down',  , 'for', , 'what'];
 
-for(i = 0; i <=9; i++);{
-	if(i%1===1){
+for(i = 0; i <=oopsArray.lenght; i++);{
+	if(i%2===1){
 		oopsArray.push(i);
 	}
 }
@@ -109,13 +109,14 @@ nope
 turn
 ```*/
 
-for(i = 0; i=>9; i--);{
-	if(i%1===1){
-	oopsArray.push(i);
-	}
-}
+var backwardsoopsArray = [];
 
-console.log(oopsArray);
+for( var i = oopsArray.length - 1 ; i>=0; i--){
+	backwardsoopsArray.push(oopsArray[i]);
+	}
+
+
+console.log(backwardsoopsArray);
 
 
 /*## `isNapTime`
@@ -125,11 +126,31 @@ Declare a variable named `napSchedule`. Set it's value to be an `Array` with the
 
 Declare a function named `nap`. This function takes in a single parameter called `schedule`
 
+
 - If `schedule` is `true` then use `console.log` to display the message `ZzZzZzZz`
 - otherwise if `schedule` is `false` use `console.log` to display the message `Gotta get to work!` and then change the value of `isNapTime` to `true`
 
 Now, Write a FOR loop that iterates through the `napSchedule` array and runs the function `nap` while passing in the value at the current position of `napSchedule` into the `nap` function.*/
 
+var isNapTime = false;
+
+var napSchedule = ["false", "false", "true", "false", "true", "true"];
+
+function nap(schedule){
+	for( var i = 0; i<=napSchedule.length; i++){
+		if(napSchedule === true){
+			return "ZzZzZzZz";
+
+		} else {
+			return "Gotta get to work";
+		}
+	}
+
+}
+
+nap();
+
+console.log(napSchedule);
 
 
 
