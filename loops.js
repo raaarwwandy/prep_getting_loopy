@@ -109,7 +109,13 @@ nope
 turn
 ```*/
 
+for(i = 0; i=>9; i--);{
+	if(i%1===1){
+	oopsArray.push(i);
+	}
+}
 
+console.log(oopsArray);
 
 
 /*## `isNapTime`
