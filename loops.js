@@ -82,6 +82,18 @@ Example result should look like:
 `[ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]`*/
 
 
+var oopsArray = ['turn', '', 'down', '' , 'for', '', 'what'];
+
+for(i = 0; i <=9; i++);{
+	if(i%1===1){
+		oopsArray.push(i);
+	}
+}
+
+console.log(oopsArray);
+
+
+
 
 /*## `Going backwards?!`
 Using a _FOR_ loop, iterate through the Array stored at `oopsArray` **backwards**. `console.log` each value in the Array.
