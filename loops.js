@@ -62,7 +62,7 @@ Use a _FOR_ loop to add only even numbers to an Array. Add `50` even numbers to 
   
 var evenNumberArray = [];
 
-for(i = 0; i <= 99; i++){
+for(var i = 0; i <= 99; i++){
 	if (i%2===0){
 	evenNumberArray.push(i);
 }
@@ -82,11 +82,11 @@ Example result should look like:
 `[ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]`*/
 
 
-var oopsArray = ['turn', , 'down',  , 'for', , 'what'];
+var oopsArray = [ 'turn' , , 'down' , , 'for' , , 'what' ];
 
-for(i = 0; i <=oopsArray.lenght; i++);{
+for(var i = 0; i < oopsArray.length; i++){
 	if(i%2===1){
-		oopsArray.push(i);
+		oopsArray[i]="nope";
 	}
 }
 
@@ -160,8 +160,17 @@ Declare a function named `copyArray` which takes two arguments: `originArray` an
 
 To get started, below your function declaration, call your function and pass in the two variables, `valuesArray` and `copyOfValuesArray`. After that, use `console.log` to to inspect the values of `valuesArray` and `copyOfValuesArray` to make sure they have the same values (which means your function worked!).*/
 
+var valuesArray = [99, 66, 829, 1941, 8, 76];
+var copyOfValuesArray = [];
 
+function copyArray (originArray, destinationArray){
+	for(var i = 0; i<= originArray.length; i++){
+		destinationArray.push(originArray[i]);
+	}
+	return destinationArray;
+}
 
+console.log (copyArray(valuesArray, copyOfValuesArray));
 
 /*![final-boss](https://s3.amazonaws.com/uploads.hipchat.com/54891/2015941/zamX8AqbgYw0QJ8/giphy.gif)
 
@@ -182,3 +191,18 @@ Your function will iterate through the `class` argument and check each student's
 If the `enrolled` property is set to `true` then change that student's `graduated` property to `true`. Otherwise, if `enrolled` is set to `false` then change `enrolled` to `true` leaving `graduated` alone and unchanged.
 */
 
+var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ];
+
+function generrateArrayOfStrings (storage){
+	var newArray = [];
+	for(var i = 0; i<=storage.length; i++){
+		if(typeof storage[i] === typeof""){
+			newArray.push(storage[i]);
+		}
+
+
+	}
+	return newArray;
+}
+
+console.log(generrateArrayOfStrings(miscStorage));
