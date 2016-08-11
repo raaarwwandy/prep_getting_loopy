@@ -134,23 +134,23 @@ Now, Write a FOR loop that iterates through the `napSchedule` array and runs the
 
 var isNapTime = false;
 
-var napSchedule = ["false", "false", "true", "false", "true", "true"];
+var napSchedule = [false, false, true, false, true, true];
 
 function nap(schedule){
-	for( var i = 0; i<=napSchedule.length; i++){
-		if(napSchedule === true){
-			return "ZzZzZzZz";
+	for( var i = 0; i<schedule.length; i++){
+		if(schedule[i] === true){
+			console.log  ('ZzZzZzZz') ;
 
 		} else {
-			return "Gotta get to work";
+			console.log  ("Gotta get to work!");
+			!isNapTime;
 		}
 	}
 
 }
 
-nap();
+nap(napSchedule);
 
-console.log(napSchedule);
 
 
 
@@ -159,7 +159,6 @@ console.log(napSchedule);
 Declare a function named `copyArray` which takes two arguments: `originArray` and `destinationArray`. Inside of this function you will loop through the contents of `originArray` and push each value into `destinationArray`.
 
 To get started, below your function declaration, call your function and pass in the two variables, `valuesArray` and `copyOfValuesArray`. After that, use `console.log` to to inspect the values of `valuesArray` and `copyOfValuesArray` to make sure they have the same values (which means your function worked!).*/
-
 
 
 
